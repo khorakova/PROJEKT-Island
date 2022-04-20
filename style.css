@@ -84,7 +84,7 @@ h2 {
 h2::after {
 	content: "";
 	display: block;
-	width: 80px;
+	width: 100px;
 	height: 5px;
 	background-color: #629fe0	;
 	margin-top: 20px;
@@ -97,15 +97,24 @@ img {
 	width: 100%;
 }
 
-.photo-description, .photo-description a, .photo-description-galery, .photo-description-galery a {
+
+.photo-description, .photo-description a {
 	text-align: center;
 	color: rgb(172, 171, 171);
 	margin: 0;
 	padding: 10px 0 20px 0;
 }
-
+.photo-description-galery p, .photo-description-galery a {
+	text-align: center;
+	color: rgb(172, 171, 171);
+	margin: 0;
+	padding: 5px;
+}
+.photo-description-galery {
+	margin-bottom: 15px;
+}
 .photo {
-	margin: 35px 0 25px 0;
+	margin: 35px 0 0 0;
 }
 
 footer {
@@ -155,10 +164,32 @@ footer a {
 	.photo {
 		display: grid;
 		grid-template-columns: 50% 50%;
-		margin-bottom: 0px;
+	}
+	/* .photo-description-galery {
+		display: none;
+	} */
+	/* .photo-description-galery:hover {
+		margin-bottom: 2rem;
+	} */
+	.photo-relative{
+		position: relative;
+	}
+	.photo-relative img {
+		width: 100%;
+		height: 100%;
 	}
 	.photo-description-galery {
-		display: none;
+		display: block;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.684);
+		width: 100%;
+		bottom: 0;
+		margin-bottom: 0;
+		/* transition: margin-bottom 2s; */
+	}
+	.photo-description-galery p, .photo-description-galery a {
+		color: white;
+		font-size: 14px;
 	}
 }
 
@@ -199,7 +230,13 @@ footer a {
 	.why-island p {
 		padding-right: 20%;
 	}
-	.tips-to-see p {
+	.tips-to-see {
 		padding-left: 20%;
+	}
+	.tips-to-see h2::after {
+		margin-left: -50px;
+	}
+	.photo {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
